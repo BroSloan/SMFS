@@ -79,159 +79,251 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxInterop.AcroPDFLib">
-      <HintPath>..\..\Pine Belt EHR Client\MAIN\RESOURCES\AxInterop.AcroPDFLib.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\AxInterop.AcroPDFLib.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="AxInterop.WMPLib">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="ClosedXML, Version=0.68.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Downloads\ClosedXML\C#\ClosedXmlSample\bin\Debug\ClosedXML.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\ClosedXML.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.BonusSkins.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Charts.v19.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.CodeParser.v19.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Data.v19.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.DataAccess.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.DataAccess.v19.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v19.2.Core">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Diagram.v19.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Images.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Images.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Office.v19.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Pdf.v19.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Pdf.v19.2.Drawing, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Pdf.v19.2.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.PivotGrid.v19.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Printing.v19.2.Core.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.RichEdit.v19.2.Export.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.RichEdit.v19.2.Core.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Sparkline.v19.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Utils.v19.2.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Utils.v19.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.Xpo.v19.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraBars.v19.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraCharts.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v19.2.Extensions, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraCharts.v19.2.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraCharts.v19.2.UI.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraCharts.v19.2.Wizard.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v19.2">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraDiagram.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraEditors.v19.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraGauges.v19.2.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraGrid.v19.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraLayout.v19.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraNavBar.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraPdfViewer.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraPdfViewer.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraPivotGrid.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraPivotGrid.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraPrinting.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraReports.v19.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraReports.v19.2.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraRichEdit.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraRichEdit.v19.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraScheduler.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraScheduler.v19.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraTreeList.v19.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraVerticalGrid.v19.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraWizard.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v19.2, Version=19.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevExpress.XtraWizard.v19.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevPower.Net.Ftp">
-      <HintPath>..\..\BibleQuiz\WindowsFormsApplication1\bin\Debug\DevPower.Net.Ftp.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DevPower.Net.Ftp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.19.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
-      <HintPath>..\packages\DocumentFormat.OpenXml.2.19.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus">
-      <HintPath>..\..\..\..\..\Downloads\EPPlus\sourceCode\epplus\EPPlus\bin\Debug\EPPlus.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="ExcelLibrary">
-      <HintPath>..\..\..\..\AMS\New Folder\ExcelLibrary.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\Google.Apis.Calendar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="IKVM.OpenJDK.Core">
-      <HintPath>..\..\..\..\..\Downloads\Pdf2Text\lib\references\IKVM.OpenJDK.Core.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\IKVM.OpenJDK.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="IKVM.OpenJDK.SwingAWT">
-      <HintPath>..\..\..\..\..\Downloads\Pdf2Text\lib\references\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\IKVM.OpenJDK.SwingAWT.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ionic.Zip">
-      <HintPath>..\..\Help\Help\Resources\Ionic.Zip.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>..\..\Pine Belt EHR Client\MAIN\bin\x86\Debug\itextsharp.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Ink, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
@@ -242,18 +334,17 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\..\AMS\AMS\bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="NetSpell.SpellChecker">
-      <HintPath>..\..\Help\Help\bin\Debug\NetSpell.SpellChecker.DLL</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\NetSpell.SpellChecker.DLL</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="pdfbox-1.8.9">
-      <HintPath>..\..\..\..\..\Downloads\Pdf2Text\lib\references\pdfbox-1.8.9.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\pdfbox-1.8.9.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -316,13 +407,13 @@
     <Reference Include="UIAutomationClient" />
     <Reference Include="WindowsBase" />
     <Reference Include="XtraGridMinRowHeight">
-      <HintPath>..\..\..\..\..\Downloads\creating-custom-view-that-has-the-minimum-row-height-e524-16.1.4-\CS\XtraGridMinRowHeight\bin\Debug\XtraGridMinRowHeight.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\XtraGridMinRowHeight.dll</HintPath>
     </Reference>
     <Reference Include="ZedGraph">
-      <HintPath>..\..\New JMA Finance\WinExp\bin\Debug\ZedGraph.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\ZedGraph.dll</HintPath>
     </Reference>
     <Reference Include="ZedGraph.Web">
-      <HintPath>..\..\New JMA Finance\WinExp\bin\Debug\ZedGraph.Web.dll</HintPath>
+      <HintPath>..\..\SMFS\SMFS\bin\Debug\ZedGraph.Web.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

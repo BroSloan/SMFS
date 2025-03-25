@@ -13,6 +13,9 @@ using DevExpress.Utils;
 using MySql.Data.MySqlClient;
 using GeneralLib;
 
+// Hello world. This is Adam.
+// It says there are no unpushed commits, but I don't believe it.
+
 namespace SMFS
 {
     public partial class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
@@ -29,6 +32,5 @@ namespace SMFS
             this.objectDataSource1.DataSource = dt;
             this.DataSource = dt;
         }
-
     }
 }

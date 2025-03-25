@@ -117,32 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="dgv2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="dgv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>107, 17</value>
+  </metadata>
+  <metadata name="dgv2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>189, 17</value>
+  </metadata>
+  <metadata name="dgv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>107, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
+        PEwpkwvqAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
+    <value>375, 17</value>
   </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>567, 17</value>
+    <value>542, 17</value>
   </metadata>
 </root>

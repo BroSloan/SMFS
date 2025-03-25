@@ -19,10 +19,6 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraGrid.Localization;
 /***********************************************************************************************/
-
-// Adam Sloan
-
-/***********************************************************************************************/
 namespace SMFS
 {
     /***********************************************************************************************/
@@ -37,6 +33,7 @@ namespace SMFS
         private bool modInsurance = false;
         private bool testing = false;
         private string oldWhat = "";
+        private string specialReport = "";
         /***********************************************************************************************/
         public Customers(bool select = false)
         {
@@ -1084,7 +1081,7 @@ namespace SMFS
             }
             else if (e.Column.FieldName.ToUpper() == "LAPSED")
             {
-                if (e.RowHandle >= 0)
+                if (e.RowHandle >= 0 && string.IsNullOrWhiteSpace(specialReport))
                 {
                     if (!String.IsNullOrWhiteSpace(e.DisplayText))
                     {
@@ -4366,6 +4363,178 @@ namespace SMFS
             dr["mod"] = "Y";
             btnSave.Show();
             btnSave.Refresh();
+        }
+        /***********************************************************************************************/
+        private void duplicateSSNsAndNotDeceasedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable dx = null;
+
+            string cmd = "SELECT c.contractNumber,firstName,lastName, address1, address2, city, state, zip1, c.lapsed, c.sex, r.serviceTotal,r.merchandiseTotal,r.cashAdvance,r.nowDue,c.ssn ";
+            cmd += " FROM customers c RIGHT JOIN contracts r ON c.contractNumber = r.contractNumber INNER JOIN(SELECT q.ssn FROM   customers q GROUP BY q.ssn HAVING COUNT(*) > 1) dup ";
+            cmd += " ON c.ssn = dup.ssn WHERE c.ssn <> '' AND c.ssn <> '0' ORDER BY c.ssn;";
+
+            try
+            {
+                dx = G1.get_db_data(cmd);
+                double total = 0D;
+                dx.Columns.Add("totalValue", Type.GetType("System.Double"));
+
+                for (int i = 0; i < dx.Rows.Count; i++)
+                {
+                    total = dx.Rows[i]["serviceTotal"].ObjToDouble() + dx.Rows[i]["merchandiseTotal"].ObjToDouble();
+                    dx.Rows[i]["totalValue"] = total;
+                }
+
+                dx.Columns["ssn"].ColumnName = "ssno";
+
+                G1.NumberDataTable(dx);
+                ClearAllPositions(gridMain);
+
+                G1.AddNewColumn(gridMain, "address1", "Address", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "city", "City", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "state", "State", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "zip1", "Zip", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "sex", "Gender", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "totalValue", "Trust Total Value", "N2", FormatType.Numeric, 80, true);
+
+                int j = 0;
+                G1.SetColumnPosition(gridMain, "num", ++j, 50);
+                G1.SetColumnPosition(gridMain, "contractNumber", ++j, 100);
+                G1.SetColumnPosition(gridMain, "firstName", ++j, 100);
+                G1.SetColumnPosition(gridMain, "lastName", ++j, 100);
+                G1.SetColumnPosition(gridMain, "ssno", ++j, 70);
+                G1.SetColumnPosition(gridMain, "address1", ++j, 120);
+                G1.SetColumnPosition(gridMain, "city", ++j, 80);
+                G1.SetColumnPosition(gridMain, "state", ++j, 60);
+                G1.SetColumnPosition(gridMain, "zip1", ++j, 50);
+                G1.SetColumnPosition(gridMain, "sex", ++j, 50);
+                G1.SetColumnPosition(gridMain, "lapsed", ++j, 50);
+                G1.SetColumnPosition(gridMain, "totalValue", ++j, 80);
+
+                dgv.DataSource = dx;
+
+                specialReport = "1";
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+        /***********************************************************************************************/
+        private void ifspecialReport1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable dx = null;
+
+            string cmd = "SELECT c.contractNumber,firstName,c.lastName, c.address1, address2, city, state, zip1, c.lapsed, c.sex, r.serviceTotal,r.merchandiseTotal,r.cashAdvance,c.ssn ";
+            cmd += " FROM customers c RIGHT JOIN contracts r ON c.contractNumber = r.contractNumber INNER JOIN(SELECT q.lastName FROM   customers q ";
+            cmd += " GROUP BY q.lastName HAVING COUNT(*) > 1) dup ON c.lastName = dup.lastName  WHERE(c.ssn = '' OR c.ssn = '0') AND c.address1 <> '' ORDER BY c.ssn;";
+
+            try
+            {
+                dx = G1.get_db_data(cmd);
+                double total = 0D;
+                dx.Columns.Add("totalValue", Type.GetType("System.Double"));
+
+                for (int i = 0; i < dx.Rows.Count; i++)
+                {
+                    total = dx.Rows[i]["serviceTotal"].ObjToDouble() + dx.Rows[i]["merchandiseTotal"].ObjToDouble();
+                    dx.Rows[i]["totalValue"] = total;
+                }
+
+                dx.Columns["ssn"].ColumnName = "ssno";
+
+                G1.NumberDataTable(dx);
+                ClearAllPositions(gridMain);
+
+                G1.AddNewColumn(gridMain, "address1", "Address", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "city", "City", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "state", "State", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "zip1", "Zip", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "sex", "Gender", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "totalValue", "Trust Total Value", "N2", FormatType.Numeric, 80, true);
+                G1.AddNewColumn(gridMain, "sex", "Gender", "", FormatType.None, 80, true);
+
+                int j = 0;
+                G1.SetColumnPosition(gridMain, "num", ++j, 50);
+                G1.SetColumnPosition(gridMain, "contractNumber", ++j, 100);
+                G1.SetColumnPosition(gridMain, "firstName", ++j, 100);
+                G1.SetColumnPosition(gridMain, "lastName", ++j, 100);
+                G1.SetColumnPosition(gridMain, "sex", ++j, 70);
+                G1.SetColumnPosition(gridMain, "ssno", ++j, 70);
+                G1.SetColumnPosition(gridMain, "address1", ++j, 120);
+                G1.SetColumnPosition(gridMain, "city", ++j, 80);
+                G1.SetColumnPosition(gridMain, "state", ++j, 60);
+                G1.SetColumnPosition(gridMain, "zip1", ++j, 50);
+                G1.SetColumnPosition(gridMain, "sex", ++j, 50);
+                G1.SetColumnPosition(gridMain, "lapsed", ++j, 50);
+                G1.SetColumnPosition(gridMain, "totalValue", ++j, 80);
+
+                dgv.DataSource = dx;
+
+                specialReport = "2";
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+        /***********************************************************************************************/
+        private void scenario2EmptySSNDuplicateAddressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable dx = null;
+
+
+            string cmd = "SELECT c.contractNumber,firstName, lastName, c.address1, address2, city, state, zip1, c.lapsed, c.sex, r.serviceTotal,r.merchandiseTotal,r.cashAdvance, c.ssn ";
+            cmd += " FROM customers c RIGHT JOIN contracts r ON c.contractNumber = r.contractNumber INNER JOIN(SELECT q.address1  FROM   customers q ";
+            cmd += " GROUP BY q.address1 HAVING COUNT(*) > 1) dup ON c.address1 = dup.address1 WHERE(c.ssn = '' OR c.ssn = '0') AND c.address1 <> '' ORDER BY c.ssn;";
+
+            //string cmd = "SELECT c.contractNumber,firstName,c.lastName, c.address1, address2, city, state, zip1, c.lapsed, r.serviceTotal,r.merchandiseTotal,r.cashAdvance,c.ssn ";
+            //cmd += " FROM customers c RIGHT JOIN contracts r ON c.contractNumber = r.contractNumber INNER JOIN(SELECT q.lastName FROM   customers q ";
+            //cmd += " GROUP BY q.lastName HAVING COUNT(*) > 1) dup ON c.lastName = dup.lastName  WHERE(c.ssn = '' OR c.ssn = '0') AND c.address1 <> '' ORDER BY c.ssn;";
+
+            try
+            {
+                dx = G1.get_db_data(cmd);
+                double total = 0D;
+                dx.Columns.Add("totalValue", Type.GetType("System.Double"));
+
+                for (int i = 0; i < dx.Rows.Count; i++)
+                {
+                    total = dx.Rows[i]["serviceTotal"].ObjToDouble() + dx.Rows[i]["merchandiseTotal"].ObjToDouble();
+                    dx.Rows[i]["totalValue"] = total;
+                }
+
+                dx.Columns["ssn"].ColumnName = "ssno";
+
+                G1.NumberDataTable(dx);
+                ClearAllPositions(gridMain);
+
+                G1.AddNewColumn(gridMain, "address1", "Address", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "city", "City", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "state", "State", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "zip1", "Zip", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "sex", "Gender", "", FormatType.None, 80, true);
+                G1.AddNewColumn(gridMain, "totalValue", "Trust Total Value", "N2", FormatType.Numeric, 80, true);
+
+                int j = 0;
+                G1.SetColumnPosition(gridMain, "num", ++j, 50);
+                G1.SetColumnPosition(gridMain, "contractNumber", ++j, 100);
+                G1.SetColumnPosition(gridMain, "firstName", ++j, 100);
+                G1.SetColumnPosition(gridMain, "lastName", ++j, 100);
+                G1.SetColumnPosition(gridMain, "ssno", ++j, 70);
+                G1.SetColumnPosition(gridMain, "address1", ++j, 120);
+                G1.SetColumnPosition(gridMain, "city", ++j, 80);
+                G1.SetColumnPosition(gridMain, "state", ++j, 60);
+                G1.SetColumnPosition(gridMain, "zip1", ++j, 50);
+                G1.SetColumnPosition(gridMain, "sex", ++j, 50);
+                G1.SetColumnPosition(gridMain, "lapsed", ++j, 50);
+                G1.SetColumnPosition(gridMain, "totalValue", ++j, 80);
+
+                dgv.DataSource = dx;
+
+                specialReport = "3";
+            }
+            catch (Exception ex)
+            {
+            }
         }
         /***********************************************************************************************/
     }
